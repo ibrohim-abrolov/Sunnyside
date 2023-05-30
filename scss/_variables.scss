@@ -1,0 +1,15 @@
+:root {
+    --main-text-color: #24303e;
+    --main-font-size: 18px;
+    --main-line-height: 25px;
+    --main-bg-color: #90d4c6;
+    --main-font-family: "Barlow", "Arial", sans-serif;
+    --main-font-weight: 600;
+}
+
+$mainTextColor: var(--main-text-color);
+$mainFontSize: var(--main-font-size);
+$mainLineHeight: var(--main-line-height);
+$mainBgColor: var(--main-bg-color);
+$mainFontFamily: var(--main-font-family);
+$mainFontWeight: 600;

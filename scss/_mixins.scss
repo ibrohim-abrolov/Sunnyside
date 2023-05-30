@@ -1,0 +1,13 @@
+
+
+@mixin list-reset {
+    margin: 0;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+@mixin flexbox ($row, $justify, $align) {
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $row;
+}
