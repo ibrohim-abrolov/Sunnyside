@@ -11,3 +11,13 @@
     align-items: $align;
     flex-direction: $row;
 }
+
+@mixin border ($size, $color) {
+    border: $size solid $color;
+}
+
+@mixin mobile-first($min) {
+    @media only screen and (min-width: $min) {
+        @content;
+    }
+}

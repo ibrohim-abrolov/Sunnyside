@@ -311,15 +311,6 @@ template {
   display: none;
 }
 
-:root {
-  --main-text-color: #24303e;
-  --main-font-size: 18px;
-  --main-line-height: 25px;
-  --main-bg-color: #90d4c6;
-  --main-font-family: "Barlow", "Arial", sans-serif;
-  --main-font-weight: 600;
-}
-
 /* barlow-600 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -398,7 +389,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 32px 10px 88px 10px;
+  padding-top: 32px;
+  padding-right: 10px;
+  padding-left: 10px;
   background-color: #00bfff;
 }
 
@@ -410,7 +403,7 @@ body {
   width: 24px;
   height: 18px;
   border: none;
-  border-color: transparent;
+  background-color: transparent;
   background-image: url("/images/hamburger.svg");
 }
 
@@ -439,7 +432,7 @@ body {
     display: inline-block;
     font-family: "Barlow", "Arial", sans-serif;
     text-decoration-line: none;
-    font-size: 18px;
+    font-size: 600;
     line-height: 25px;
     font-weight: 600;
     letter-spacing: -0.128571px;
@@ -462,5 +455,65 @@ body {
 @media only screen and (min-width: 992px) {
   .header__wrapper {
     padding-bottom: 116px;
+  }
+}
+.hero__wrapper {
+  padding-bottom: 296px;
+  background-image: url("/images/heromobilebg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 375px 538px;
+}
+
+.hero__textbox {
+  max-width: 327px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.hero__title {
+  margin: 0;
+  font-size: 40x;
+  line-height: 49px;
+  text-align: center;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.hero__title::after {
+  position: relative;
+  top: 180px;
+  display: block;
+  content: "";
+  width: 30px;
+  height: 108px;
+  margin: 0 auto;
+  background-image: url("/images/path.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-animation: topToBottom 1s linear infinite alternate;
+          animation: topToBottom 1s linear infinite alternate;
+}
+
+@-webkit-keyframes topToBottom {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(60px);
+            transform: translateY(60px);
+  }
+}
+
+@keyframes topToBottom {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(60px);
+            transform: translateY(60px);
   }
 }/*# sourceMappingURL=main.css.map */

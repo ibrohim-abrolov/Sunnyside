@@ -1,11 +1,9 @@
-$fontfamily: "Barlow", "Arial", sans-serif;
-$fontweight: 600;
 
 .header__wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 32px 10px 88px 10px;
+    @include flexbox (row space-between center);
+    padding-top: 32px;
+    padding-right: 10px;
+    padding-left: 10px;
     background-color: #00bfff;
 }
 
@@ -17,7 +15,7 @@ $fontweight: 600;
     width: 24px;
     height: 18px;
     border: none;
-    border-color: transparent;
+    background-color: transparent;
     background-image: url("/images/hamburger.svg");
 }
 
@@ -36,10 +34,7 @@ $fontweight: 600;
 
     .nav__list {
         display: flex;
-        margin: 0;
-        padding-left: 0;
-        list-style-type: none;
- 
+        @include list-reset;
     }
 
     .nav__items:not(:last-child) {
@@ -48,11 +43,11 @@ $fontweight: 600;
 
     .nav__link {
         display: inline-block;
-        font-family: $fontfamily;
+        font-family: var(--main-font-family);
         text-decoration-line: none;
-        font-size: 18px;
-        line-height: 25px;
-        font-weight: $fontweight;
+        font-size: var(--main-font-size);
+        line-height: var(--main-line-height);
+        font-weight: var(--main-font-weight);
         letter-spacing: -0.128571px;
         color: #fff;
         transition: color 0.4s ease;
@@ -67,7 +62,7 @@ $fontweight: 600;
     .nav__link:active {
         padding: 16px 30px;
         background-color: #fff;
-        color: #24303e;
+        color: $mainTextColor;
         font-size: 15px;
     }
 }

@@ -1,7 +1,7 @@
-@use "normalize";
-@use "variables";
-@use "mixins";
-@use "fonts";
-@use "general";
-@use "blocks/block";
+@import "variables";
+@import "mixins";
+@import "fonts";
+@import "normalize";
+@import "general";
+@import "blocks/block";
 
